@@ -1,40 +1,30 @@
-/* learn Arrays */
+/* learn Objects */
 
-//Arrays : 배열.
+/*
+const playerName = "mingyeong";
+const PlayerPoints = 121212;
+const PlayerCute = True;
+const PlayerFat = "little bit";
+*/
 
-/* ---------------------------------------------------------------------
-//Arrays가 없을 경우
-const mon = "mon";
-const tue = "tue";
-const wed = "wed";
-const thu = "thu";
-const fri = "fri";
-const sat = "sat";
-const sun = "sun";
+//player[0] = name
+//player[1] = points
+//player[2] = cute
+//palyer[3] = Fat
 
-//const daysOfWeek = mon + tue + wed + thu + fri + sat + sun; -> 불편하고 특정 문자 호출 불가.
+//const player = ["mingyeong", 1203, True, "little bit"];
 
-const daysOfWeek = [mon, tue, wed, thu, fri, sat, sun]; //변수 선언 후 배열 작성
------------------------------------------------------------------------*/
+const player = {
+    name: "mingyeong",
+    points: 10,
+    fat: true,
+}; //Object is not list. 리스트는 모든 값이 같은 의미를 갖는다.
 
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"]; //변수 선언 없이 ["**","--"]
-const nonsense = [1, 2, "hello", false, null, true, undefined, "mingyeong"]; //배열 안에 숫자, 문자 등 가능.
+console.log(player);
+console.log(player.name);
 
-console.log(daysOfWeek, nonsense);
-
-//Get Item from Array
-console.log(daysOfWeek[4]);
-
-//Add one more day to the array
-daysOfWeek.push("sun")
-
-console.log(daysOfWeek);
-
-
-/* Example */
-
-const toBuy = ["potato", "tomato", "pizza"];
-toBuy.push("kimbab");
-
-console.log(toBuy);
-// console.log(toBuy[99999]); -> undifined
+player.fat = false; //update object 가능.
+player.favorite = "IU"; //add object 가능.
+console.log(player);
+player.points = player.points + 15;
+console.log(player);
