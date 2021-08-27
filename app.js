@@ -1,30 +1,45 @@
-/* learn Objects */
+/* learn Function */
 
-/*
-const playerName = "mingyeong";
-const PlayerPoints = 121212;
-const PlayerCute = True;
-const PlayerFat = "little bit";
-*/
+console.log("Hello my name is Mingyeong");
+console.log("Hello my name is Mingu");
+console.log("Hello my name is Mimgong");
+console.log("Hello my name is Mingong");
 
-//player[0] = name
-//player[1] = points
-//player[2] = cute
-//palyer[3] = Fat
+//Function : 코드의 반복을 줄이기, 코드를 캡슐화해서, 여러 번 실행할 수 있음.
 
-//const player = ["mingyeong", 1203, True, "little bit"];
+function sayHello(nameOfPerson, age){
+    console.log("Hello my name is " + nameOfPerson + "and I'm " + age + ".");
+}
+
+sayHello("mingyeong", 23);
+sayHello("mingu", 20);
+sayHello("mimgong", 27);
+sayHello("mingong", 19);
+
+
+function plus(firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber);
+}
+
+function divide(a, b){
+    console.log(a/b);
+}
+
+plus(8, 60);
+plus(8, 6);
+divide(8, 6);
+divide(98, 20);
+
+
+/* Example */
 
 const player = {
     name: "mingyeong",
-    points: 10,
-    fat: true,
-}; //Object is not list. 리스트는 모든 값이 같은 의미를 갖는다.
+    sayHello: function(otherPersonName) {
+        console.log("hello! " + otherPersonName +". nice to meet you!");
+    },
+};
 
-console.log(player);
 console.log(player.name);
-
-player.fat = false; //update object 가능.
-player.favorite = "IU"; //add object 가능.
-console.log(player);
-player.points = player.points + 15;
-console.log(player);
+player.sayHello("mingong");
+player.sayHello("mingu");
