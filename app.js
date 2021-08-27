@@ -1,45 +1,38 @@
-/* learn Function */
+/* learn Returns */
 
-console.log("Hello my name is Mingyeong");
-console.log("Hello my name is Mingu");
-console.log("Hello my name is Mimgong");
-console.log("Hello my name is Mingong");
-
-//Function : 코드의 반복을 줄이기, 코드를 캡슐화해서, 여러 번 실행할 수 있음.
-
-function sayHello(nameOfPerson, age){
-    console.log("Hello my name is " + nameOfPerson + "and I'm " + age + ".");
+const age = 21;
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner + 2;
 }
 
-sayHello("mingyeong", 23);
-sayHello("mingu", 20);
-sayHello("mimgong", 27);
-sayHello("mingong", 19);
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
 
 
-function plus(firstNumber, secondNumber) {
-    console.log(firstNumber + secondNumber);
-}
+/* Example : calculator */
 
-function divide(a, b){
-    console.log(a/b);
-}
-
-plus(8, 60);
-plus(8, 6);
-divide(8, 6);
-divide(98, 20);
-
-
-/* Example */
-
-const player = {
-    name: "mingyeong",
-    sayHello: function(otherPersonName) {
-        console.log("hello! " + otherPersonName +". nice to meet you!");
+const calculator = {
+    plus: function (a,b) {
+        return a+b;
+    },
+    minus: function (a,b) {
+        return a-b;
+    },
+    times: function (a,b) {
+        return a*b;
+    },
+    divide: function (a,b) {
+        return a/b;
+    },
+    power: function (a,b) {
+        return a**b;
     },
 };
 
-console.log(player.name);
-player.sayHello("mingong");
-player.sayHello("mingu");
+const plusResult = calculator.plus(2,3);
+const minusResult = calculator.minus(plusResult,10);
+const timesResult = calculator.times(10,minusResult);
+const divideResult = calculator.divide(timesResult,plusResult);
+const powerResult = calculator.power(divideResult, minusResult);
+
