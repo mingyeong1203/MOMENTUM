@@ -1,49 +1,40 @@
-/* learn cosnt, variable */
+/* learn Arrays */
 
-const a = 5; //const : 바뀌지 않는 값(변수). -> update X
-const b = 2;
+//Arrays : 배열.
 
-const myName = "mingyeong"; //문자(string) 도 가능. 
-const veryLongVariableName = 0; //변수 이름은 공백 대신 다음 단어의 첫 문자를 대문자로 표현.
+/* ---------------------------------------------------------------------
+//Arrays가 없을 경우
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
 
-console.log(5+2); //console.log :출력.
-console.log(5-2);
-console.log(5*2);
-console.log(5/2);
+//const daysOfWeek = mon + tue + wed + thu + fri + sat + sun; -> 불편하고 특정 문자 호출 불가.
 
-console.log(a+b); 
-console.log(a-b);
-console.log(a*b);
-console.log(a/b);
+const daysOfWeek = [mon, tue, wed, thu, fri, sat, sun]; //변수 선언 후 배열 작성
+-----------------------------------------------------------------------*/
 
-console.log("hello " + myName);
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"]; //변수 선언 없이 ["**","--"]
+const nonsense = [1, 2, "hello", false, null, true, undefined, "mingyeong"]; //배열 안에 숫자, 문자 등 가능.
 
+console.log(daysOfWeek, nonsense);
 
-/* learn let */
+//Get Item from Array
+console.log(daysOfWeek[4]);
 
-let c = 8; //let : 변수의 값 변경 가능. -> update O
-let d = 3;
-let myNameis = "mingyeong"; //변수 생성 시 let O
+//Add one more day to the array
+daysOfWeek.push("sun")
 
-console.log("hello " + myNameis);
-
-myNameis ="mingong"; //업데이트 시 let X
-
-console.log("hello " + myNameis); 
+console.log(daysOfWeek);
 
 
-/* learn Booleans */ 
+/* Example */
 
-//Booleans : true or false
-//비디오가 재생되고 있는가?, 웹사이트가 로딩되고 있는가? ...
+const toBuy = ["potato", "tomato", "pizza"];
+toBuy.push("kimbab");
 
-const amIFat = true; //"true" -> X
-console.log(amIFat);
-
-const nothing = null; //null : 아무것도 없음. 값이 존재하지 않음. 비어있음.
-console.log(nothing);
-
-let something; 
-console.log(something); //출력 결과 -> undefinde : 정의되어있지 않음.
-
-console.log(nothing, something);
+console.log(toBuy);
+// console.log(toBuy[99999]); -> undifined
